@@ -1,0 +1,28 @@
+{
+  "name": "plataforma-para-vagas",
+  "version": "1.0.0",
+  "description": "Atividade do curso de TSI",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch ./src/mock/db.json",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rian1432/plataforma-para-vagas.git"
+  },
+  "author": "Rian Beltrão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rian1432/plataforma-para-vagas/issues"
+  },
+  "homepage": "https://github.com/Rian1432/plataforma-para-vagas#readme",
+  "devDependencies": {
+    "eslint": "^8.49.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1",
+    "json-server": "^0.17.3"
+  }
+}
