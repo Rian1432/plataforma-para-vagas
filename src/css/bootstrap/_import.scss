@@ -3,6 +3,12 @@
 
 // 2. Include any default variable overrides here
 
+$primary: #11111F;
+$secondary: #4BBAE7;
+$success: #41CD92;
+$danger: #F13D3D;
+
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/variables-dark";
