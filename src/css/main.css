@@ -7849,10 +7849,31 @@ progress {
   --bs-alert-link-color: var(--bs-dark-text-emphasis);
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url(../assets/fonts/Montserrat-Italic.ttf);
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../assets/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(../assets/fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat";
 }
 
 body {
@@ -7866,6 +7887,13 @@ body > div {
 
 a {
   text-decoration: none;
+}
+
+.login-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/images/fundo2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
 }
 
 /*# sourceMappingURL=main.css.map */
