@@ -1,1 +1,19 @@
-{}
+{
+  "users": [
+    {
+      "email": "recruiter@email.com",
+      "password": "$2a$10$e4MnNEqtdHs0mnuSuXMvEO.phis2k0rLVNB9DCfTBa1dkLLlAkeRS",
+      "name": "Recrutador",
+      "role": "recruiter",
+      "id": 1
+    },
+    {
+      "email": "eita@email.com",
+      "password": "$2a$10$uOO5Efz1qZVj3GqcTaQ8x.inZs4d2X3JjYJKUlCe4iq6h7Pru2SSW",
+      "name": "test name",
+      "role": "test",
+      "id": 2
+    }
+  ],
+  "jobs": []
+}

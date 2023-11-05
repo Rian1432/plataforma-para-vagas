@@ -7890,7 +7890,7 @@ a {
 }
 
 .login-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/images/fundo2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/images/fundo-login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;
