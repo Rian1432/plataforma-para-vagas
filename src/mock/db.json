@@ -13,6 +13,13 @@
       "name": "test name",
       "role": "test",
       "id": 2
+    },
+    {
+      "email": "terste@teste.com",
+      "password": "$2a$10$df7zpQtmzHitoW8DWtHpXOF1BBgpBoQFUg3jtKyrdi1aW5zFuOjO.",
+      "name": "teste de inputs",
+      "role": "recruiter",
+      "id": 3
     }
   ],
   "jobs": []

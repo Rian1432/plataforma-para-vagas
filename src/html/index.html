@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open to work</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/services/auth.js"></script>
   </head>
   <body>
     <div class="row">
@@ -14,9 +13,9 @@
           <span>Nome do Usuário</span>
         </div>
         <span> Vagas </span>
-        <a href="./auth/login.html" class="text-white link-text-secondary-hover">Sair</a>
+        <span onclick="logout()">Sair</span>
       </div>
-
+      
       <div class="col-10 flex flex-column p-0">
         <div class="bg-dark-subtle w-100 p-5">
           <h3>Página inicial</h3>
@@ -24,4 +23,11 @@
       </div>
     </div>
   </body>
+  <script>
+    function logout() {
+      document.cookie = `Token=; expires=${new Date()}; path=/`
+      document.cookie = `User=; expires=${new Date()}; path=/`
+      window.location.href = 'http://127.0.0.1:5500/src/html/auth/login.html'
+    }
+  </script>
 </html>
