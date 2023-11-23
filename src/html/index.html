@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open to work</title>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../assets/main.css">
   </head>
   <body>
     <div class="row">
@@ -18,16 +18,44 @@
       
       <div class="col-10 flex flex-column p-0">
         <div class="bg-dark-subtle w-100 p-5">
-          <h3>Página inicial</h3>
+          <h3>Vagas</h3>
         </div>
+        
+        <main class="p-5 row justify-content-between">
+          <div class="card border shadow p-3 rounded col-3 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+
+          <div class="card border shadow p-3 rounded col-3 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+
+          <div class="card border shadow p-3 rounded col-3 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+
+          <div class="card border shadow p-3 rounded col-3 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   </body>
-  <script>
-    function logout() {
-      document.cookie = `Token=; expires=${new Date()}; path=/`
-      document.cookie = `User=; expires=${new Date()}; path=/`
-      window.location.href = 'http://127.0.0.1:5500/src/html/auth/login.html'
-    }
-  </script>
 </html>
+
