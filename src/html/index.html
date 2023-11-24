@@ -6,23 +6,37 @@
     <title>Open to work</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body>
+  <body class="container-fluid">
+    <nav class="navbar d-block d-lg-none sticky bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Navbar</a>
+      </div>
+    </nav>
+
     <div class="row">
-      <div class="col-2 bg-primary p-5 text-white d-flex flex-column gap-3">
-        <div class="border-top border-bottom py-2">
-          <span>Nome do Usuário</span>
+      <div class="col-2 d-lg-flex d-none flex-column bg-primary p-5 text-white justify-content-between sticky h-100">
+        <div class="d-flex flex-column gap-3">
+          <div class="border-top border-bottom py-2">
+            <span>Nome do Usuário</span>
+          </div>
+          <span> Vagas </span>
+          <span onclick="logout()">Sair</span>
         </div>
-        <span> Vagas </span>
-        <span onclick="logout()">Sair</span>
+        <img src="../assets/images/logo.png" alt="logo" class="mt-5">
       </div>
       
-      <div class="col-10 flex flex-column p-0">
+      <div class="col-lg-10 col-12 flex flex-column p-0">
         <div class="bg-dark-subtle w-100 p-5">
           <h3>Página inicial</h3>
+        </div>
+
+        <div class="container-fluid p-5">
+          <div id="jobs" class="row"></div>
         </div>
       </div>
     </div>
   </body>
+  <script type="module" src="../js/api/jobs.js"></script>
   <script>
     function logout() {
       document.cookie = `Token=; expires=${new Date()}; path=/`

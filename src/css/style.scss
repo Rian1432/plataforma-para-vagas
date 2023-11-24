@@ -1,21 +1,27 @@
-@import "import";
-@import "components";
-@import "./../fonts";
+@import "./bootstrap/import";
+@import "./bootstrap/components";
+@import "./fonts";
 
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
+html {
+  height: 100%;
+}
 body {
-  min-height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
-body > div {
-  min-height: 100vh;
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 a {
@@ -27,6 +33,11 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;
+  min-height: 100vh;
+}
+
+.text-bold {
+  font-family: 'Montserrat Bold', sans-serif;
 }
 
 .form-control {

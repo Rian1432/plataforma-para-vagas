@@ -2,7 +2,7 @@ export default class HttpClient {
   baseUrl = 'http://localhost:3000'
   config = {
     method: 'POST',
-    body: '',
+    body: null,
     headers: {
       'Content-Type': 'application/json',
     }

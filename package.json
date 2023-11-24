@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "json-server ./src/mock/db.json -m ./node_modules/json-server-auth ",
-    "sass-style": "sass src/css/bootstrap/style.scss src/css/main.css",
-    "sass-watch": "sass --watch src/css/bootstrap/style.scss src/css/main.css",
+    "sass-style": "sass src/css/style.scss src/css/main.css",
+    "sass-watch": "sass --watch src/css/style.scss src/css/main.css",
     "test": "test"
   },
   "repository": {
