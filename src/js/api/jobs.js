@@ -2,14 +2,8 @@ import HttpClient from '../../js/api/HttpClient.js'
 import { createCard } from '../components/card.js';
 
 const fetchApi = new HttpClient()
-      
-// const form = document.querySelector('form')
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault()
-//   createJob()
-// })
 
-function getJobs() {
+export function getJobs() {
   fetchApi.get('/jobs?_limit=9')
     .then((response) => {
       if(!response.ok) {
@@ -29,15 +23,8 @@ function getJobs() {
     })
 }
 
-function createJob() {
-  const newJob = {
-    title: 'teste de criação',
-    description: 'Um emprego pra alguém que queira trabalhar',
-    uf: 'PR',
-    salary: 2.5
-  }
-
-  fetchApi.post('/jobs', newJob)
+export function createJob(data) {
+  fetchApi.post('/jobs', data)
     .then((response) => {
       if(!response.ok) {
         console.log(response);
@@ -53,5 +40,3 @@ function createJob() {
       console.log(error)
     })
 }
-
-getJobs()

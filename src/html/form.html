@@ -28,21 +28,53 @@
     
     <div class="col-lg-10 col-12 flex flex-column p-0">
       <div class="bg-dark-subtle w-100 p-5">
-        <h3>Vagas</h3>
+        <h3>Nova vaga</h3>
       </div>
 
       <div class="container-fluid p-5">
-        <div class="mb-2">
-          <a href="./form.html" class="btn btn-outline-secondary">Criar vaga</a>
-        </div>
-        <div id="jobs" class="row"></div>
+        <form class="d-flex flex-column gap-4">
+          <label class="d-flex flex-column gap-2">
+            <span>Título</span>
+            <input type="text" class="form-control" id="title" required>
+          </label>
+
+          <label class="d-flex flex-column gap-2">
+            <span>Descrição</span>
+            <textarea rows="4" style="resize: none" id="description" class="form-control" required></textarea>
+          </label>
+
+          <label>
+            <span>Salário</span>
+            <input type="number" class="form-control" id="salary" required>
+          </label>
+
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-primary ">Voltar</button>
+            <button class="btn btn-primary ">Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  <script type="module">
-    import {getJobs} from '../js/api/jobs.js'
 
-    getJobs()
+  <script type="module">
+    import {createJob} from '../js/api/jobs.js'
+
+    const form = document.querySelector('form')
+    
+    form.addEventListener('submit', (event) => {
+      console.log(event);
+      event.preventDefault()
+
+      const newJob = {
+        title: document.querySelector('#title').value,
+        description: document.querySelector('#description').value,
+        uf: 'PR',
+        salary: document.querySelector('#salary').value
+      }
+
+      createJob(newJob)
+    })
 
     function logout() {
       document.cookie = `Token=; expires=${new Date()}; path=/`
