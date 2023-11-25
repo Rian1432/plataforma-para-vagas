@@ -4,7 +4,7 @@ export function createCard (title, description) {
   const cardTitle = document.createElement('h4')
   const cardDescription = document.createElement('div')
 
-  card.setAttribute('class', 'card shadow rounded col-lg-4 m-2')
+  card.setAttribute('class', 'card shadow rounded my-2')
   cardBody.setAttribute('class', 'card-body p-4')
   cardTitle.setAttribute('class', 'card-title border-b border-primary font-bold')
   cardDescription.setAttribute('class', 'card-text py-2')
@@ -17,7 +17,11 @@ export function createCard (title, description) {
   cardBody.appendChild(cardDescription)
   cardBody.appendChild(createButton('Candidatar-se'))
 
-  return card
+  const element = document.createElement('div')
+  element.setAttribute('class', 'col-lg-4 col-md-6 col-12')
+  element.appendChild(card)
+
+  return element
 }
 
 export function createButton(text) {

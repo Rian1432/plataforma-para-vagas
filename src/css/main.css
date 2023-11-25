@@ -7892,6 +7892,10 @@ body {
   z-index: 100;
 }
 
+.sidebar {
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
 }
