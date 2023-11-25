@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open to work</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="container-fluid">
+  <div class="row login-background">
+    <div class="col-sm-12 col-lg-4 h-sm-full bg-primary text-white p-3 d-flex flex-column align-items-center">
+      <img src="../assets/images/logo.png" alt="logo" class="mt-5">
+      
+      <form class="d-flex flex-column align-items-center gap-4 justify-content-center">
+        <h1 class="text-info">Resgistre-se</h1>
+        
+        <div class="d-flex flex-column gap-2">
+          <div class="text-align-right">Perfil</div>
+          <label  class="d-flex align-items-center gap-2">
+            <input name="role-register" type="radio" value="recruiter" checked />
+            <span>Recrutador</span>
+          </label>
+          <label  class="d-flex align-items-center gap-2">
+            <input name="role-register" type="radio" value="worker" />
+            <span>Open to work</span>
+          </label>
+        </div>
+
+        <label class="d-flex flex-column">
+          <span class="form-label">Usuário</span>
+          <input id="name-register" type="text" class="form-control form-control-sm" />
+        </label>
+
+        <label class="d-flex flex-column">
+          <span class="form-label">Email</span>
+          <input id="email-register" type="text" class="form-control form-control-sm" />
+        </label>
+
+        <label class="d-flex flex-column">
+          <span class="form-label">Senha</span>
+          <input id="password-register" type="text" class="form-control form-control-sm" />
+        </label>
+
+        <div class="row gap-3 mt-3">
+          <button class="btn btn-info" type="submit">
+            Criar
+          </button>
+          <a class="btn btn-outline-info" href="./login.html">
+            Voltar
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-8 p-0"></div>
+  </div>
+  
+  <script type="module" src="../js/api/register.js"></script>
+</body>
+</html>

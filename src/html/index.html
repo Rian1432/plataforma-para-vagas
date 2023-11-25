@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open to work</title>
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body class="container-fluid">
-    <nav class="navbar d-block d-lg-none sticky bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">Navbar</a>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open to work</title>
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
 
-    <div class="row">
-      <div class="col-2 d-lg-flex d-none flex-column bg-primary p-5 text-white justify-content-between sticky h-100">
-        <div class="d-flex flex-column gap-3">
-          <div class="border-top border-bottom py-2">
-            <span>Nome do Usuário</span>
-          </div>
-          <span> Vagas </span>
-          <span onclick="logout()">Sair</span>
-        </div>
-        <img src="../assets/images/logo.png" alt="logo" class="mt-5">
-      </div>
-      
-      <div class="col-lg-10 col-12 flex flex-column p-0">
-        <div class="bg-dark-subtle w-100 p-5">
-          <h3>Página inicial</h3>
-        </div>
+<body class="container-fluid">
+  <nav class="navbar d-block d-lg-none sticky bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+    </div>
+  </nav>
 
-        <div class="container-fluid p-5">
-          <div id="jobs" class="row"></div>
+  <div class="row">
+    <div class="col-2 d-lg-flex d-none flex-column bg-primary p-5 text-white justify-content-between sticky h-100">
+      <div class="d-flex flex-column gap-3">
+        <div class="border-top border-bottom py-2">
+          <span>Nome do Usuário</span>
         </div>
+        <span> Vagas </span>
+        <span onclick="logout()">Sair</span>
+      </div>
+      <img src="../assets/images/logo.png" alt="logo" class="mt-5">
+    </div>
+    
+    <div class="col-lg-10 col-12 flex flex-column p-0">
+      <div class="bg-dark-subtle w-100 p-5">
+        <h3>Página inicial</h3>
+      </div>
+
+      <div class="container-fluid p-5">
+        <div id="jobs" class="row"></div>
       </div>
     </div>
-  </body>
+  </div>
+  
   <script type="module" src="../js/api/jobs.js"></script>
   <script>
     function logout() {
       document.cookie = `Token=; expires=${new Date()}; path=/`
       document.cookie = `User=; expires=${new Date()}; path=/`
-      window.location.href = 'http://127.0.0.1:5500/src/html/auth/login.html'
+      window.location.href = 'http://127.0.0.1:5500/src/html/login.html'
     }
   </script>
+</body>
 </html>

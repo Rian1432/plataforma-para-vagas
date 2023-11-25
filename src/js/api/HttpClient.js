@@ -9,7 +9,7 @@ export default class HttpClient {
   }
 
   constructor() {
-  }
+  } 
 
   get(route) {
     const url = `${this.baseUrl}${route}`
