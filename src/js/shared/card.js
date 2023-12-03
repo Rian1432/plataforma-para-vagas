@@ -1,37 +1,30 @@
+import $ from 'jquery'
+
 export function createCard (title, description) {
-  const card = document.createElement('div')
-  const cardBody = document.createElement('div')
-  const cardTitle = document.createElement('h4')
-  const cardDescription = document.createElement('div')
-  const cardButtonContainer = document.createElement('div')
+  const card = $('<div></div>')
+  const cardBody = $('<div></div>')
+  const cardTitle = $(`<h4>${title}</h4>`)
+  const cardDescription = $(`<div>${description}</div>`)
+  const cardButtonContainer = $('<div></div>')
 
-  card.setAttribute('class', 'card shadow rounded my-2')
-  cardBody.setAttribute('class', 'card-body p-4')
-  cardTitle.setAttribute('class', 'card-title border-b border-primary font-bold')
-  cardDescription.setAttribute('class', 'card-text py-2 mb-2')
-  cardButtonContainer.setAttribute('class', 'd-flex justify-content-end')
+  $(card).addClass('card shadow rounded my-2')
+  $(cardBody).addClass('card-body p-4')
+  $(cardTitle).addClass('card-title border-b border-primary font-bold')
+  $(cardDescription).addClass('card-text py-2 mb-2')
+  $(cardButtonContainer).addClass('d-flex justify-content-end')
 
-  cardTitle.textContent = title
-  cardDescription.textContent = description
+  card.append(cardBody)
+  cardBody.append(cardTitle)
+  cardBody.append(cardDescription)
+  cardButtonContainer.append(createButton('Candidatar-se', 'btn btn-secondary text-white'))
+  cardBody.append(cardButtonContainer)
 
-  card.appendChild(cardBody)
-  cardBody.appendChild(cardTitle)
-  cardBody.appendChild(cardDescription)
-  cardButtonContainer.appendChild(createButton('Candidatar-se', 'btn btn-secondary text-white'))
-  cardBody.appendChild(cardButtonContainer)
-
-
-  const element = document.createElement('div')
-  element.setAttribute('class', 'col-lg-4 col-md-6 col-12')
-  element.appendChild(card)
-
-  return element
+  return $('<div></div>').addClass('col-lg-4 col-md-6 col-12').append(card)
 }
 
 export function createButton(text, styles) {
-  const button = document.createElement('button')
-  button.setAttribute('class', styles)
-  button.textContent = text
+  const button = $(`<button>${text}</button>`)
+  button.addClass(styles)
 
   return button
 }

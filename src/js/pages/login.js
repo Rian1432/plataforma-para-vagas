@@ -1,9 +1,9 @@
-import HttpClient from '../api/HttpClient'
+import {HttpClient} from '../api/HttpClient'
+import $ from 'jquery'
 
 const fetchApi = new HttpClient()
-const form = document.querySelector('form')
 
-form.addEventListener('submit', (event) => {
+$('form').on('submit', (event) => {
   event.preventDefault()
   login()
 })

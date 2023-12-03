@@ -1,8 +1,11 @@
-import HttpClient from '../../js/api/HttpClient.js'
-import { logout } from '../shared/global.js'
+import {HttpClient} from '../../js/api/HttpClient.js'
+import { logout, isAuthenticated } from '../shared/global.js'
+import $ from 'jquery'
+
+$(document).ready(isAuthenticated)
+$('#exit').on('click', logout)
 
 const fetchApi = new HttpClient()
-const exitButton = document.querySelector('#exit')
 
 export function createJob(data) {
   fetchApi.post('/jobs', data)
@@ -20,7 +23,3 @@ export function createJob(data) {
       console.log(error)
     })
 }
-
-exitButton.addEventListener('click', () => {
-  logout()
-})

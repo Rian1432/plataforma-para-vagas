@@ -1,5 +1,14 @@
+import $ from 'jquery'
+import 'jquery.cookie'
+
 export function logout() {
-  document.cookie = 'Token='
-  document.cookie = 'User='
+  $.removeCookie('Token', { path: '/' })
+  $.removeCookie('User', { path: '/' })
   window.location.href = 'login.html'
+}
+
+export function isAuthenticated () {
+  if(!$.cookie('Token')) {
+    window.location.href = 'login.html'
+  }
 }

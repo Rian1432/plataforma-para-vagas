@@ -66,13 +66,6 @@
       "id": 6
     },
     {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 27
-    },
-    {
       "title": "adads",
       "description": "adads",
       "uf": "PR",
@@ -80,46 +73,11 @@
       "id": 28
     },
     {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 29
-    },
-    {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 30
-    },
-    {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 31
-    },
-    {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 32
-    },
-    {
       "title": "aasddas",
       "description": "addaa",
       "uf": "PR",
       "salary": "123",
       "id": 33
-    },
-    {
-      "title": "",
-      "description": "",
-      "uf": "PR",
-      "salary": "",
-      "id": 34
     }
   ]
 }

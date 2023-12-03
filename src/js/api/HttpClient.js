@@ -1,4 +1,4 @@
-class HttpClient {
+export class HttpClient {
   baseUrl = 'http://localhost:3000'
   config = {
     method: 'POST',
@@ -40,5 +40,3 @@ class HttpClient {
     return fetch(url, this.config)
   }
 }
-
-module.exports = HttpClient
