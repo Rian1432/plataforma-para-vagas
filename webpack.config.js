@@ -16,6 +16,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
   },
   devServer: {
     static: {
@@ -34,7 +35,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpg|gif|svg)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -46,10 +47,27 @@ module.exports = {
         ],
       },
       {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
+      {
         test: /\.(s(a|c)ss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false, // Desabilita a resolução de URLs
+            },
+          },
           'sass-loader',
         ],
       },
