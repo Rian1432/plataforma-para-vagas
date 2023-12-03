@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Open to work</title>
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="container-fluid">
@@ -21,9 +21,9 @@
           <span>Nome do Usuário</span>
         </div>
         <span> Vagas </span>
-        <span onclick="logout()">Sair</span>
+        <span id="exit">Sair</span>
       </div>
-      <img src="../assets/images/logo.png" alt="logo" class="mt-5">
+      <img src="./images/logo.png" alt="logo" class="mt-5">
     </div>
     
     <div class="col-lg-10 col-12 flex flex-column p-0">
@@ -39,16 +39,5 @@
       </div>
     </div>
   </div>
-  <script type="module">
-    import {getJobs} from '../js/api/jobs.js'
-
-    getJobs()
-
-    function logout() {
-      document.cookie = `Token=; expires=${new Date()}; path=/`
-      document.cookie = `User=; expires=${new Date()}; path=/`
-      window.location.href = 'http://127.0.0.1:5500/src/html/login.html'
-    }
-  </script>
 </body>
 </html>

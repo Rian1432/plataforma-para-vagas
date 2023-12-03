@@ -1,4 +1,4 @@
-import HttpClient from './HttpClient.js'
+import HttpClient from '../api/HttpClient'
 
 const fetchApi = new HttpClient()
 const form = document.querySelector('form')
@@ -26,15 +26,9 @@ function login() {
     .then((response) => {
       document.cookie = `Token=${response.accessToken};path=/`
       document.cookie = `User=${JSON.stringify(response.user)};path=/`
-      window.location.href = 'http://127.0.0.1:5500/src/html/index.html'
+      window.location.href = '/index.html'
     })
     .catch((error) => {
       console.log(error)
     })
-}
-
-export function logout() {
-  document.cookie = 'Token='
-  document.cookie = 'User='
-  window.location.href = 'http://127.0.0.1:5500/src/html/auth/login.html'
 }

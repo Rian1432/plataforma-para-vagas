@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Open to work</title>
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="container-fluid">
@@ -21,9 +21,9 @@
           <span>Nome do Usuário</span>
         </div>
         <span> Vagas </span>
-        <span onclick="logout()">Sair</span>
+        <span id="exit">Sair</span>
       </div>
-      <img src="../assets/images/logo.png" alt="logo" class="mt-5">
+      <img src="./images/logo.png" alt="logo" class="mt-5">
     </div>
     
     <div class="col-lg-10 col-12 flex flex-column p-0">
@@ -38,49 +38,23 @@
             <input type="text" class="form-control" id="title" required>
           </label>
 
-          <label class="d-flex flex-column gap-2">
-            <span>Descrição</span>
-            <textarea rows="4" style="resize: none" id="description" class="form-control" required></textarea>
-          </label>
-
           <label>
             <span>Salário</span>
             <input type="number" class="form-control" id="salary" required>
           </label>
 
+          <label class="d-flex flex-column gap-2">
+            <span>Descrição</span>
+            <textarea rows="6" style="resize: none" id="description" class="form-control" required></textarea>
+          </label>
+
           <div class="d-flex justify-content-between">
-            <button class="btn btn-outline-primary ">Voltar</button>
-            <button class="btn btn-primary ">Enviar</button>
+            <a href="./index.html" class="btn btn-outline-primary">Voltar</a>
+            <button class="btn btn-primary" type="submit">Enviar</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-
-  <script type="module">
-    import {createJob} from '../js/api/jobs.js'
-
-    const form = document.querySelector('form')
-    
-    form.addEventListener('submit', (event) => {
-      console.log(event);
-      event.preventDefault()
-
-      const newJob = {
-        title: document.querySelector('#title').value,
-        description: document.querySelector('#description').value,
-        uf: 'PR',
-        salary: document.querySelector('#salary').value
-      }
-
-      createJob(newJob)
-    })
-
-    function logout() {
-      document.cookie = `Token=; expires=${new Date()}; path=/`
-      document.cookie = `User=; expires=${new Date()}; path=/`
-      window.location.href = 'http://127.0.0.1:5500/src/html/login.html'
-    }
-  </script>
 </body>
 </html>

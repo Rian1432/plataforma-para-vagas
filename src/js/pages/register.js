@@ -26,7 +26,6 @@ function createUser() {
     })
     .then((response) => {
       console.log(response);
-      // window.location.href = 'http://127.0.0.1:5500/src/html/auth/login.html'
     })
     .catch((error) => {
       console.log(error)
