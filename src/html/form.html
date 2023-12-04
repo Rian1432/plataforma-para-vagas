@@ -8,11 +8,36 @@
 </head>
 
 <body class="container-fluid">
-  <nav class="navbar d-block d-lg-none sticky bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">Navbar</a>
+  <div class="row">
+    <nav class="navbar d-block d-lg-none sticky bg-primary">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand text-white" href="#">Open To Work</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasDarkNavbar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 13 13">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="offcanvas offcanvas-start bg-primary text-white" id="sidebar">
+    <div class="offcanvas-header px-4 d-flex justify-content-end">
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
-  </nav>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column bg-primary p-3 text-white justify-content-between h-100">
+        <div class="d-flex flex-column gap-3">
+          <div class="border-top border-bottom py-2">
+            <span>Nome do Usuário</span>
+          </div>
+          <span> Vagas </span>
+          <span class="exit">Sair</span>
+        </div>
+        <img src="./images/logo.png" alt="logo" class="mt-5 mx-auto w-75">
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-2 d-lg-flex d-none flex-column bg-primary p-5 text-white justify-content-between sticky sidebar">
@@ -21,17 +46,17 @@
           <span>Nome do Usuário</span>
         </div>
         <span> Vagas </span>
-        <span id="exit">Sair</span>
+        <span class="exit">Sair</span>
       </div>
       <img src="./images/logo.png" alt="logo" class="mt-5">
     </div>
     
-    <div class="col-lg-10 col-12 flex flex-column p-0">
+    <main class="col-lg-10 col-12 flex flex-column p-0">
       <div class="bg-dark-subtle w-100 p-5">
         <h3>Nova vaga</h3>
       </div>
 
-      <div class="container-fluid p-5">
+      <section class="container-fluid p-5">
         <form class="d-flex flex-column gap-4">
           <label class="d-flex flex-column gap-2">
             <span>Título</span>
@@ -53,8 +78,8 @@
             <button class="btn btn-primary" type="submit">Enviar</button>
           </div>
         </form>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
 </body>
 </html>

@@ -1,10 +1,11 @@
+import 'bootstrap/dist/js/bootstrap.bundle.js'
 import { HttpClient } from '../api/HttpClient.js'
 import { createCard } from '../shared/card.js';
 import { logout, isAuthenticated } from '../shared/global.js'
 import $ from 'jquery'
 
 $(document).ready(isAuthenticated)
-$('#exit').on('click', logout)
+$('.exit').on('click', logout)
 
 const fetchApi = new HttpClient()
 
