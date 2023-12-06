@@ -10,16 +10,23 @@
     {
       "email": "eita@email.com",
       "password": "$2a$10$uOO5Efz1qZVj3GqcTaQ8x.inZs4d2X3JjYJKUlCe4iq6h7Pru2SSW",
-      "name": "test name",
-      "role": "test",
+      "name": "Rian Beltrão",
+      "role": "client",
       "id": 2
     },
     {
-      "email": "terste@teste.com",
+      "email": "teste@teste.com",
       "password": "$2a$10$df7zpQtmzHitoW8DWtHpXOF1BBgpBoQFUg3jtKyrdi1aW5zFuOjO.",
       "name": "teste de inputs",
       "role": "recruiter",
       "id": 3
+    },
+    {
+      "email": "asd@asd.com",
+      "password": "$2a$10$gR4hQkWU2eGUKPH0.AQzVuywK7THoqQkGM05zNFA0Vzb70ZTXw9Fm",
+      "name": "testando",
+      "role": "recruiter",
+      "id": 4
     }
   ],
   "jobs": [
@@ -38,46 +45,12 @@
       "id": 2
     },
     {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
-      "uf": "PR",
-      "salary": 2.5,
+      "title": "teste de vaga do usuário",
+      "description": "teste ",
+      "salary": "12000",
+      "recruiterId": 4,
+      "uf": "pr",
       "id": 3
-    },
-    {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
-      "uf": "PR",
-      "salary": 2.5,
-      "id": 4
-    },
-    {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
-      "uf": "PR",
-      "salary": 2.5,
-      "id": 5
-    },
-    {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
-      "uf": "PR",
-      "salary": 2.5,
-      "id": 6
-    },
-    {
-      "title": "adads",
-      "description": "adads",
-      "uf": "PR",
-      "salary": "1234123",
-      "id": 28
-    },
-    {
-      "title": "aasddas",
-      "description": "addaa",
-      "uf": "PR",
-      "salary": "123",
-      "id": 33
     }
   ]
 }

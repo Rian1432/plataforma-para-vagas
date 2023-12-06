@@ -10,16 +10,15 @@ $('form').on('submit', (event) => {
 
 function createUser() {
   const newUser = {
-    email: document.querySelector('#email-register').value,
-    password: document.querySelector('#password-register').value,
-    name: document.querySelector('#name-register').value,
-    role: document.querySelector('input[name=role-register]:checked').value
+    email: $('#email-register').val(),
+    password: $('#password-register').val(),
+    name: $('#name-register').val(),
+    role: $('input[name=role-register]:checked').val()
   }
 
   fetchApi.post('/register', newUser)
     .then((response) => {
       if(!response.ok) {
-        console.log(response);
         throw new Error('Oops, Houve algo de errado!')
       }
       return response.json()

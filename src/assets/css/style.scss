@@ -45,3 +45,24 @@ a {
 .text-bold {
   font-family: 'Montserrat Bold', sans-serif;
 }
+
+.card {
+  transition: all 300ms;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.exit {
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.exit:hover {
+  color: $secondary;
+}
+
+.cursor-default {
+  cursor: default;
+}

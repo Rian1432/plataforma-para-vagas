@@ -4,11 +4,23 @@ import { logout, isAuthenticated } from '../shared/global.js'
 import $ from 'jquery'
 
 $(document).ready(isAuthenticated)
-$('.exit').on('click', logout)
 
+const user = JSON.parse($.cookie('User'))
 const fetchApi = new HttpClient()
 
-export function createJob(data) {
+$('.user-name').text(`Olá, ${user.name}`)
+$('.exit').on('click', logout)
+$('#send-button').on('click', createJob)
+
+export function createJob() {
+  const data = {
+    title: $('#title').val(),
+    description: $('#description').val(),
+    salary: $('#salary').val(),
+    recruiterId: user.id,
+    uf: 'pr'
+  }
+
   fetchApi.post('/jobs', data)
     .then((response) => {
       if(!response.ok) {

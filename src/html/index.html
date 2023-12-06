@@ -29,9 +29,9 @@
       <div class="d-flex flex-column bg-primary p-3 text-white justify-content-between h-100">
         <div class="d-flex flex-column gap-3">
           <div class="border-top border-bottom py-2">
-            <span>Nome do Usuário</span>
+            <span class="user-name"></span>
           </div>
-          <span> Vagas </span>
+          <span class="text-secondary cursor-default"> Vagas </span>
           <span class="exit">Sair</span>
         </div>
         <img src="./images/logo.png" alt="logo" class="mt-5 mx-auto w-75">
@@ -43,9 +43,9 @@
     <div class="col-2 d-lg-flex d-none flex-column bg-primary p-5 text-white justify-content-between sticky sidebar">
       <div class="d-flex flex-column gap-3">
         <div class="border-top border-bottom py-2">
-          <span>Nome do Usuário</span>
+          <span class="user-name"></span>
         </div>
-        <span> Vagas </span>
+        <span class="text-secondary cursor-default"> Vagas </span>
         <span class="exit">Sair</span>
       </div>
       <img src="./images/logo.png" alt="logo" class="mt-5">
@@ -57,9 +57,7 @@
       </div>
 
       <section class="container-fluid p-5">
-        <div class="mb-2">
-          <a href="./form.html" class="btn btn-outline-secondary">Criar vaga</a>
-        </div>
+        <div id="create-btn-container" class="mb-2"></div>
         <div id="jobs" class="row"></div>
       </section>
     </main>
