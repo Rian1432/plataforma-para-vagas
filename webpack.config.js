@@ -9,7 +9,7 @@ module.exports = {
     login:  '/src/js/pages/login.js',
     register:  '/src/js/pages/register.js',
     form:  '/src/js/pages/JobsForm.js',
-    httpClient:  '/src/js/api/HttpClient.js',
+    httpClient:  '/src/js/shared/HttpClient.js',
     styles: '/src/assets/index.js'
   },
   mode: 'development',

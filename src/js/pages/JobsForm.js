@@ -1,5 +1,5 @@
 import 'bootstrap/dist/js/bootstrap.bundle.js'
-import {HttpClient} from '../../js/api/HttpClient.js'
+import {HttpClient} from '../shared/HttpClient.js'
 import { logout, isAuthenticated } from '../shared/global.js'
 import $ from 'jquery'
 

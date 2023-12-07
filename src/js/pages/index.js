@@ -1,6 +1,6 @@
 import 'bootstrap/dist/js/bootstrap.bundle.js'
-import { HttpClient } from '../api/HttpClient.js'
-import { createCard } from '../shared/card.js';
+import { HttpClient } from '../shared/HttpClient.js'
+import { cardComponent } from '../shared/card.js';
 import { logout, isAuthenticated } from '../shared/global.js'
 import $ from 'jquery'
 import 'jquery.cookie'
@@ -14,8 +14,11 @@ const isRecruiter = user.role === 'recruiter'
 $('.user-name').text(`Olá, ${user.name}`)
 $('.exit').on('click', logout)
 
-if(user.role === 'recruiter')
+if(user.role === 'recruiter'){
   showCreateButton()
+  $('#title').text('Minhas vagas')
+}
+
 
 function showCreateButton() {
   const btn = $('<a href="./form.html" class="btn btn-outline-secondary">Criar vaga</a>')
@@ -35,9 +38,15 @@ function getJobs() {
       return response.json()
     })
     .then((response) => {
-      response.forEach(job => {
-        $('#jobs').append(createCard(job.title, job.description))
-      });
+      if(isRecruiter) {
+        response.forEach(job => {
+          $('#jobs').append(cardComponent(job.title, job.description, 'close'))
+        });
+      } else {
+        response.forEach(job => {
+          $('#jobs').append(cardComponent(job.title, job.description, 'show'))
+        });
+      }
     })
     .catch((error) => {
       console.log(error)

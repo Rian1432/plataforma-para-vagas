@@ -1,4 +1,4 @@
-import {HttpClient} from '../../js/api/HttpClient.js'
+import {HttpClient} from '../shared/HttpClient.js'
 import $ from 'jquery'
 
 const fetchApi = new HttpClient()    

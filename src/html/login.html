@@ -5,28 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Open to work</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="container-fluid">
   <div class="row login-background">
     <div class="col-sm-12 col-md-4 h-sm-full bg-primary text-white p-3 d-flex flex-column align-items-center">
-      <img src="./images/logo.png" alt="logo" class="mt-5">
+      <div class="animate__animated animate__fadeIn">
+        <img src="./images/logo.png" alt="logo" class="mt-5">
 
-      <form class="d-flex flex-column align-items-center gap-4 justify-content-center">
-        <h1 class="text-info">Entrar</h1>
+        <form class="d-flex flex-column align-items-center gap-4 justify-content-center px-3">
+          <h1 class="text-info">Entrar</h1>
+            <label class="d-flex flex-column">
+            <span class="form-label">Email</span>
+            <input type="email" class="form-control" id="email-login" autocomplete="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Digite um email válido." required />
+          </label>
           <label class="d-flex flex-column">
-          <span class="form-label">Email</span>
-          <input type="email" class="form-control" id="email-login" autocomplete="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Digite um email válido." required />
-        </label>
-        <label class="d-flex flex-column">
-          <span class="form-label">Senha</span>
-          <input type="password" autocomplete="password" class="form-control" id="password-login" required />
-        </label>
-        <div class="row gap-3 mt-3">
-          <button id="submit-buttond" class="btn btn-secondary" type="submit">Entrar</button>
-          <a href="register.html" class="btn btn-outline-info">Resgistre-se</a>
-        </div>
-      </form>
+            <span class="form-label">Senha</span>
+            <input type="password" autocomplete="password" class="form-control" id="password-login" required />
+          </label>
+          <div class="row gap-3 mt-3">
+            <button id="submit-buttond" class="btn btn-secondary" type="submit">Entrar</button>
+            <a href="register.html" class="btn btn-outline-info">Resgistre-se</a>
+          </div>
+        </form>
+      </div>
     </div>
     
     <div class="col-sm-0 col-md-8 p-0 d-md-block d-none"></div>
