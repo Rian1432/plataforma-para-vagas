@@ -1,4 +1,5 @@
 import {HttpClient} from '../shared/HttpClient.js'
+import { showNotify } from '../shared/global.js'
 import $ from 'jquery'
 
 const fetchApi = new HttpClient()    
@@ -24,9 +25,11 @@ function createUser() {
       return response.json()
     })
     .then((response) => {
+      showNotify('success', 'Usuário registrado com sucesso!')
       console.log(response);
     })
     .catch((error) => {
+      showNotify('error', 'Não foi possível criar o usuário.')
       console.log(error)
     })
 }

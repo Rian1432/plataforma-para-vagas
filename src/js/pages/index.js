@@ -1,9 +1,8 @@
-import 'bootstrap/dist/js/bootstrap.bundle.js'
 import { HttpClient } from '../shared/HttpClient.js'
-import { cardComponent } from '../shared/card.js';
-import { logout, isAuthenticated } from '../shared/global.js'
+import { logout, isAuthenticated, showNotify } from '../shared/global.js'
 import $ from 'jquery'
 import 'jquery.cookie'
+import 'bootstrap'
 
 $(document).ready(isAuthenticated)
 
@@ -40,17 +39,46 @@ function getJobs() {
     .then((response) => {
       if(isRecruiter) {
         response.forEach(job => {
-          $('#jobs').append(cardComponent(job.title, job.description, 'close'))
+          $('#jobs').append(createCard(job.title, job.description, 'close'))
         });
       } else {
         response.forEach(job => {
-          $('#jobs').append(cardComponent(job.title, job.description, 'show'))
+          $('#jobs').append(createCard(job.title, job.description, 'show'))
         });
       }
     })
-    .catch((error) => {
-      console.log(error)
+    .catch(() => {
+      showNotify('error', 'Não foi possível encontrar vagas')
     })
+}
+
+function createCard (title, description, type = 'show') {
+  const card = $('<div></div>')
+  const cardBody = $('<div></div>')
+  const cardTitle = $(`<h4>${title}</h4>`)
+  const cardDescription = $(`<div>${description}</div>`)
+
+  $(card).addClass('card shadow rounded my-2')
+  $(cardBody).addClass('card-body p-4')
+  $(cardTitle).addClass('card-title border-b border-primary font-bold')
+  $(cardDescription).addClass('card-text py-2 mb-2')
+
+  card.append(cardBody)
+  cardBody.append(cardTitle)
+  cardBody.append(cardDescription)
+
+  if(type === 'show') {
+    const cardButtonContainer = $('<div></div>')
+    const button = $('<button>Candidatar-se</button>')
+
+    $(button).addClass('btn btn-secondary text-white')
+    cardButtonContainer.append(button)
+
+    $(cardButtonContainer).addClass('d-flex justify-content-end')
+    cardBody.append(cardButtonContainer)
+  }
+
+  return $('<div></div>').addClass('col-lg-4 col-md-6 col-12').append(card)
 }
 
 getJobs()

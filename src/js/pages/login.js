@@ -1,4 +1,5 @@
 import { HttpClient } from '../shared/HttpClient'
+import { showNotify } from '../shared/global'
 import $ from 'jquery'
 
 const fetchApi = new HttpClient()
@@ -17,7 +18,6 @@ function login() {
   fetchApi.post('/login', userData)
     .then((response) => {
       if(!response.ok) {
-        console.log(response);
         throw new Error('Oops, Houve algo de errado!')
       }
       
@@ -28,7 +28,7 @@ function login() {
       document.cookie = `User=${JSON.stringify(response.user)};path=/`
       window.location.href = '/index.html'
     })
-    .catch((error) => {
-      console.log(error)
+    .catch(() => {
+      showNotify('error', 'Usuário ou senha inválidos.')
     })
 }

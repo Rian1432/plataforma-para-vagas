@@ -54,6 +54,11 @@ a {
   transform: scale(1.08);
 }
 
+.toast {
+  right: 10px;
+  top: 10px;
+}
+
 .exit {
   transition: all 300ms;
   cursor: pointer;
