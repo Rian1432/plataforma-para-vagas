@@ -7,13 +7,16 @@ Este projeto tem como objetivo implementar progressivamente e de forma didática
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
-## Endereço de Deploy - GitHub Pages
+## Endereço de Deploy - Vercel
 
-https://utfpr-gp.github.io/roubank-css/
+[Open To Work](https://plataforma-para-vagas.vercel.app/login.html)
+
+#### Observação:
+Verificar se o json-server está rodando localmente
 
 ## Protótipo
 
-[Protótipo no figma](https://www.figma.com/file/nQdexYZDDs33oHCjRZol1J/open-to-work?type=design&mode=design&t=6j5KDBY4UjQekAJ3-1)
+[Protótipo no figma](https://www.figma.com/file/nQdexYZDDs33oHCjRZol1J/open-to-work?type=design&node-id=114-326&mode=design)
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
@@ -59,7 +62,7 @@ https://utfpr-gp.github.io/roubank-css/
 </s>
 
 #### RA5 - Efetuar requisições assíncronas para uma API fake e APIs públicas, permitindo a obtenção e manipulação de dados dinamicamente.
-- [x] ID 22 - Realiza requisições assíncronas para uma API fake e APIs públicas, utilizando adequadamente conceitos como AJAX, Fetch API ou bibliotecas, para obter dados dinâmicos e realizar a manipulação e exibição dos resultados na página web.
+- [x] ID 22 - Realiza requisições assíncronas para uma API fake e/ou APIs públicas, utilizando adequadamente conceitos como AJAX, Fetch API ou bibliotecas, para obter dados dinâmicos e realizar a manipulação e exibição dos resultados na página web.
 
 ## Manual de execução
 - Clonar o repositório com `git clone`
@@ -81,3 +84,13 @@ https://utfpr-gp.github.io/roubank-css/
 - O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
   - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`    
 - Executar o projeto frontend.
+
+### Usuários já cadastrados:
+
+Recrutador:
+- email: recruiter@email.com,
+- password: 123123123
+
+Prestador de serviços:
+- email: client@email.com,
+- password: 123123123

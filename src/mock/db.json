@@ -8,49 +8,29 @@
       "id": 1
     },
     {
-      "email": "eita@email.com",
-      "password": "$2a$10$uOO5Efz1qZVj3GqcTaQ8x.inZs4d2X3JjYJKUlCe4iq6h7Pru2SSW",
-      "name": "Rian Beltrão",
+      "email": "client@email.com",
+      "password": "$2a$10$cny4g241jOcqjraHH3gPnuU86uHmRiEju/btUS2uix1IRM.UR8bA2",
+      "name": "Prestador de serviço",
       "role": "client",
       "id": 2
-    },
-    {
-      "email": "teste@teste.com",
-      "password": "$2a$10$df7zpQtmzHitoW8DWtHpXOF1BBgpBoQFUg3jtKyrdi1aW5zFuOjO.",
-      "name": "teste de inputs",
-      "role": "recruiter",
-      "id": 3
-    },
-    {
-      "email": "asd@asd.com",
-      "password": "$2a$10$gR4hQkWU2eGUKPH0.AQzVuywK7THoqQkGM05zNFA0Vzb70ZTXw9Fm",
-      "name": "testando",
-      "role": "recruiter",
-      "id": 4
     }
   ],
   "jobs": [
     {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
+      "title": "Vaga para frontend Júnior",
+      "description": "Aptidão em HTML, CSS e JS",
       "uf": "PR",
       "salary": 2.5,
-      "id": 1
+      "id": 1,
+      "recruiterId": 1
     },
     {
-      "title": "teste de vaga",
-      "description": "Um emprego pra alguém que queira trabalhar",
+      "title": "Vaga para backend Júnior",
+      "description": "Aptidão em PHP e banco MySql",
       "uf": "PR",
       "salary": 2.5,
-      "id": 2
-    },
-    {
-      "title": "teste de vaga do usuário",
-      "description": "teste ",
-      "salary": "12000",
-      "recruiterId": 4,
-      "uf": "pr",
-      "id": 3
+      "id": 1,
+      "recruiterId": 1
     }
   ]
 }
