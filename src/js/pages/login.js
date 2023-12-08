@@ -11,8 +11,8 @@ $('form').on('submit', (event) => {
 
 function login() {
   const userData = {
-    email: document.querySelector('#email-login').value,
-    password: document.querySelector('#password-login').value,
+    email: $('#email-login').val(),
+    password: $('#password-login').val(),
   }
   
   fetchApi.post('/login', userData)

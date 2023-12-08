@@ -1,8 +1,8 @@
-import 'bootstrap/dist/js/bootstrap.bundle.js'
 import {HttpClient} from '../shared/HttpClient.js'
 import { logout, isAuthenticated, showNotify } from '../shared/global.js'
 import $ from 'jquery'
 import 'jquery-mask-plugin'
+import 'bootstrap'
 
 $(document).ready(isAuthenticated)
 $('#salary').mask('000.000.000.000.000,00', {reverse: true});
